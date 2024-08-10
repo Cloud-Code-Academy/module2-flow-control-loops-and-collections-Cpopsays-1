@@ -29,7 +29,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
+        String helloWorldString = 'Hello World';
+        
+        if (x == null || y == null || x <= y){
+            return null;
+
+
+        }
+        return helloWorldString;
+
     }
 
     /**
@@ -42,7 +50,12 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
+        //Question: how do I do this in one line?
+        if (age == null || age < 18){
+            return false;
+        }
+
+        return true;
     }
 
     /**
@@ -54,11 +67,23 @@ public with sharing class FlowControlLoopsCollections {
      * @param num2 The second number.
      * @return The maximum of the two numbers, or null if either number is null.
      */
-    public static Integer findMax(Integer num1, Integer num2) {
+
+     public static Integer findMax(Integer num1, Integer num2) {
+        //Question: how do I redo this using math.max method instead?
         // Initialize largestNum as null
         Integer largestNum = null;
+        
+        if (num1 == null || num2 == null){
+            return null;
+        }
 
-        return null; // Replace null with the variable you used to store the result
+        if (num1 >= num2){
+            largestNum=num1;
+            return largestNum;
+        }
+
+        largestNum=num2;
+        return largestNum; 
     }
 
 

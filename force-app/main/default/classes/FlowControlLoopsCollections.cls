@@ -68,23 +68,17 @@ public with sharing class FlowControlLoopsCollections {
      * @return The maximum of the two numbers, or null if either number is null.
      */
 
-     public static Integer findMax(Integer num1, Integer num2) {
-        //Question: how do I redo this using math.max method instead?
+    public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
         Integer largestNum = null;
         
         if (num1 == null || num2 == null){
             return null;
         }
-
-        if (num1 >= num2){
-            largestNum=num1;
-            return largestNum;
-        }
-
-        largestNum=num2;
-        return largestNum; 
-    }
+        return Math.max(num1, num2);
+    }    
+    
+    
 
 
     /**
@@ -96,7 +90,22 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        
+        String checkNumberString;
+        if (a == 0) {
+            checkNumberString = 'Zero';
+        }
+
+        if (a > 0) {
+            checkNumberString = 'Positive';
+        }
+
+        if (a < 0) {
+            checkNumberString = 'Negative';
+        }
+    
+        return checkNumberString;
+    
     }
 
     /**
@@ -108,7 +117,21 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        if (a == null) {
+            return null;
+        }
+        Integer b = a / 2;
+        Integer c = b * 2;
+        String result = 'initialized string';
+       
+        if ( a == c) {
+            result = 'Even';
+            return result;
+        }
+        else{
+            result = 'Odd';
+            return result;
+        }         
     }
 
     /**
